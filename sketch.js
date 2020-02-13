@@ -1,10 +1,10 @@
 let furbyBrushBool = false;
 let ellipseBrushBool = false;
-let dim;
+let pg;
 
-let snowflakes = [];
 let furby;
 let rotation = 0;
+let mj1;
 
 
 let furbyX;
@@ -23,13 +23,16 @@ let power;
 function preload(){
   furby = loadImage("images/furby.png");
   power= loadImage("images/power.png");
+  mj1 = loadImage("images/mj1.png");
+
+
 }
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  pg = createGraphics(800, 250);
-  
+  pg = createGraphics(50, - 250);
+
   furbyX = random(21, width-21);
   furbyY = random(21, height-21);
 
@@ -49,20 +52,13 @@ function setup() {
 
 function draw() {
 
-let t = frameCount / 60;
-for (let i = 0; i < random(5); i++) {
-    snowflakes.push(new snowflake()); // append snowflake object
-  }
-  for (let flake of snowflakes) {
-    flake.update(t); // update snowflake position
-    flake.display(); // draw snowflake
-  }
 
-  background(0);
+  background(675, 90, 900);
 
   fill(0, 12);
   rect(0, 0, width, height);
   fill(255);
+  noStroke();
   textSize(40);
   text("Score" + score + "00", width/2, 50);
 
@@ -84,8 +80,8 @@ for (let i = 0; i < random(5); i++) {
   if(furbyY >= height-20 || furbyY <= 20){
     furbyYspeed = furbyYspeed * -1;
   }
-  ellipse(mouseX, mouseY, 80, 80);
-  pg.background(51);
+  image(power, mouseX, mouseY, 200, 200);
+  pg.background(60);
   pg.noFill();
   pg.stroke(255);
   pg.ellipse(mouseX - 150, mouseY - 75, 60, 60);
@@ -105,7 +101,9 @@ for (let i = 0; i < random(5); i++) {
   //pop();
   // if the mouse collision is true
   // trigger all of this stuff
-  image(power, width/2, height/2, 50, 50);
+  
+
+  image(mj1, width/19.2, height/1.12, 180, 140);
 
   image(furby, furbyX, furbyY, 40, 40);
 
@@ -134,7 +132,7 @@ for (let i = 0; i < random(5); i++) {
 
 function  endScreen(){
   background(random(255), random(255), random(255));
-  image(furby, width/2, height/2, mouseX, mouseY);
+  image(power, width/2, height/2, mouseX, mouseY);
 }
 
 function windowResized(){
@@ -148,15 +146,5 @@ function mouseDragged(){
   }
   if(ellipseBrushBool == true){
     ellipseBrush();
-  }
-}
-function keyTyped(){
-  if(key === 'f'){
-    furbyBrushBool = true;
-    ellipseBrushBool = false;
-  }
-  if(key === 'e'){
-    ellipseBrushBool = true;
-    furbyBrushBool = false;
   }
 }
