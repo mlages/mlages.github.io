@@ -45,15 +45,46 @@ function setup(){
 
   }
 
-  //craeting buttons for each date and then triggering functions
+  //creating buttons for each date and then triggering functions
   let button0 = createButton(dateArray[0]);
   button0.mousePressed(date0);
 
   let button1 = createButton(dateArray[1]);
   button1.mousePressed(date1);
+
+  let button2 = createButton(dateArray[2]);
+  button2.mousePressed(date2);
+
+  let button3 = createButton(dateArray[3]);
+  button3.mousePressed(date3);
+
+  let button4 = createButton(dateArray[4]);
+  button4.mousePressed(date4);
+
+  let button5 = createButton(dateArray[5]);
+  button5.mousePressed(date5);
+
+  let button6 = createButton(dateArray[6]);
+  button6.mousePressed(date6);
+
+  let button7 = createButton(dateArray[7]);
+  button7.mousePressed(date7);
+
+  let button8 = createButton(dateArray[8]);
+  button8.mousePressed(date8);
+
+  let button9 = createButton(dateArray[9]);
+  button9.mousePressed(date9);
+
+  let button10 = createButton(dateArray[10]);
+  button10.mousePressed(date10);
+
+
+
+
 }
 
-//date functions...two at the moment 
+//date functions...two at the moment
 function date0(){
     background(10, 20, 95);
 
@@ -91,6 +122,168 @@ function date1(){
   arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
 
 }
+function date2(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[2], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date3(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[3], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date4(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[4], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date5(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[5], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date6(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[6], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date7(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[7], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date8(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[8], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date9(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[9], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
+function date10(){
+   background(10, 20, 95);
+
+    //mapping the first position in the sleep quality array
+    //the range in percentage is 0-100 and the range of
+    //arc in 0-360
+  sleepQualityMapped = map(sleepQualityArray[10], 0, 100, 0, 360);
+  print(sleepQualityMapped);
+
+  strokeWeight(20);
+
+  noFill();
+  stroke(300, 30);
+
+  //use the mapped value with the arc
+  arc(450, 200, 100, 100, 0, radians(sleepQualityMapped));
+}
+
 
 function draw(){
 
